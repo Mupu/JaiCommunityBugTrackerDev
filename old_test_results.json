@@ -3,7 +3,7 @@
     "beta-0.1.096": {
       "linux": {
         "compilation_exit_code": 3,
-        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x74510e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7e4bf4642520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP15Ast_Declaration+0x4ca) [0x818aaa]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP6Queued+0x1be) [0x80564e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x7cd5e2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace13do_pipe_inferEv+0xff) [0x7cd40f]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace10flow_pipesEb+0x11e) [0x7cfe3e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z13compiler_pumpP9Workspaceb+0x38d) [0x7dc8ad]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z20do_compilation_cycleP9Workspaceb+0x52) [0x7defa2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z28workspace_thread_entry_pointPv+0x1c0) [0x7df420]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x84a285]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7e4bf4694ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x7e4bf4726850]\n\n",
+        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x74510e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7294e3042520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP15Ast_Declaration+0x4ca) [0x818aaa]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP6Queued+0x1be) [0x80564e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x7cd5e2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace13do_pipe_inferEv+0xff) [0x7cd40f]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace10flow_pipesEb+0x11e) [0x7cfe3e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z13compiler_pumpP9Workspaceb+0x38d) [0x7dc8ad]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z20do_compilation_cycleP9Workspaceb+0x52) [0x7defa2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z28workspace_thread_entry_pointPv+0x1c0) [0x7df420]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x84a285]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7294e3094ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x7294e3126850]\n\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
@@ -15,7 +15,7 @@
       },
       "windows": {
         "compilation_exit_code": 3,
-        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai/bin/jai.exe compiler_bugs/353_352_CEC1.jai\r\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n  unknown(8BD47374) : BaseThreadInitThunk\r\n\r\n",
+        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai/bin/jai.exe compiler_bugs/353_352_CEC1.jai\r\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n  unknown(C5E67374) : BaseThreadInitThunk\r\n\r\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
@@ -28,5 +28,35 @@
     },
     "file_path": "compiler_bugs/353_352_CEC1.jai",
     "tracking_issue_number": 353
+  },
+  "356": {
+    "beta-0.1.096": {
+      "linux": {
+        "compilation_exit_code": 1,
+        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\nThe program contains circular dependencies.\nStrangely, we did not find a cycle, so this is probably due to a compiler bug. To help you work around the problem, we'll now print out what is not compiling:\n\nHere are items, waiting to compile, that look suspicious because we don't know why they are waiting:\n\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/modules/Default_Allocator/module.jai:288,23: Info: (header of procedure 'pointer_offset')\n\n    pointer_offset :: (ptr: *$T, ofs: $U) -> *void #expand {\n                      ^^^^^^^^^^^^^^^^^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/modules/Default_Allocator/module.jai:288,23: s=0x0 type=LAMBDA\n\n    pointer_offset :: (ptr: *$T, ofs: $U) -> *void #expand {\n                      ^^^^^^^^^^^^^^^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,1: Info: (declaration of 'X')\n\n    X::union{x:X;}\n    ^^^^^^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,1: s=0x0 type=DECLARATION\n\n    X::union{x:X;}\n    ^^^^^^^^\n\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/modules/Default_Allocator/module.jai:292,21: Info: (header of procedure 'pointer_diff')\n\n    pointer_diff :: (first: *$T, second: *$U) -> s64 #expand {\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/modules/Default_Allocator/module.jai:292,21: s=0x0 type=LAMBDA\n\n    }\n    pointer_diff :: (first: *$T, second: *$U) -> s64 #expand {\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,10: Info: (declaration of 'x')\n\n    X::union{x:X;}\n             ^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,10: s=0x0 type=DECLARATION\n\n    X::union{x:X;}\n             ^^^\n\n\nHere are some other items, that may just be waiting on the ones listed above:\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,4: Info: (X)\n\n    X::union{x:X;}\n       ^^^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,4: s=0x0 type=STRUCT\n\n    X::union{x:X;}\n       ^^^^^\n\n\n",
+        "compiler_output": "",
+        "expected_compilation_exit_code": 1,
+        "expected_run_exit_code": -1,
+        "is_runtime_test": false,
+        "passed_test": true,
+        "run_exit_code": -1,
+        "runtime_error_output": "",
+        "runtime_output": ""
+      },
+      "windows": {
+        "compilation_exit_code": 1,
+        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nThe program contains circular dependencies.\r\nStrangely, we did not find a cycle, so this is probably due to a compiler bug. To help you work around the problem, we'll now print out what is not compiling:\r\n\r\nHere are items, waiting to compile, that look suspicious because we don't know why they are waiting:\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,1: Info: (declaration of 'X')\r\n\r\n    X::union{x:X;}\r\n    ^^^^^^^^\r\n\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,1: s=0x0 type=DECLARATION\r\n\r\n    X::union{x:X;}\r\n    ^^^^^^^^\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,10: Info: (declaration of 'x')\r\n\r\n    X::union{x:X;}\r\n             ^^^\r\n\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,10: s=0x0 type=DECLARATION\r\n\r\n    X::union{x:X;}\r\n             ^^^\r\n\r\n\r\nHere are some other items, that may just be waiting on the ones listed above:\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,4: Info: (X)\r\n\r\n    X::union{x:X;}\r\n       ^^^^^\r\n\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC1.jai:1,4: s=0x0 type=STRUCT\r\n\r\n    X::union{x:X;}\r\n       ^^^^^\r\n\r\n\r\n",
+        "compiler_output": "",
+        "expected_compilation_exit_code": 1,
+        "expected_run_exit_code": -1,
+        "is_runtime_test": false,
+        "passed_test": true,
+        "run_exit_code": -1,
+        "runtime_error_output": "",
+        "runtime_output": ""
+      }
+    },
+    "file_path": "compiler_bugs/356_355_CEC1.jai",
+    "tracking_issue_number": 356
   }
 }
