@@ -23,8 +23,10 @@
 #
 # FOR RELEASE
 #
+# [ ] add link to the sourcecode file/folder in the tracker
 # [ ] clearify bug report message for expected error to exit exit code and maybe remove 
-      error code 3 because its kinda useless
+      error code 3 because its kinda useless. Also mention the use of asserts to make 
+      tests actually work
 # [ ] maybe exclude logs from change detection?
 # [ ] think about bugs with modules again (probably modules folder inside bug folder?)
 # [ ] add labels for new and just fixed issues
