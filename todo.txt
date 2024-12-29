@@ -23,6 +23,7 @@
 #
 # FOR RELEASE
 #
+# [ ] fix broken decrementVersionString 
 # [ ] add link to the sourcecode file/folder in the tracker
 # [ ] clearify bug report message for expected error to exit exit code and maybe remove 
       error code 3 because its kinda useless. Also mention the use of asserts to make 
