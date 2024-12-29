@@ -3,7 +3,7 @@
     "beta-0.1.096": {
       "linux": {
         "compilation_exit_code": 3,
-        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x74510e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x707597c42520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP15Ast_Declaration+0x4ca) [0x818aaa]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP6Queued+0x1be) [0x80564e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x7cd5e2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace13do_pipe_inferEv+0xff) [0x7cd40f]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace10flow_pipesEb+0x11e) [0x7cfe3e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z13compiler_pumpP9Workspaceb+0x38d) [0x7dc8ad]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z20do_compilation_cycleP9Workspaceb+0x52) [0x7defa2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z28workspace_thread_entry_pointPv+0x1c0) [0x7df420]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x84a285]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x707597c94ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x707597d26850]\n\n",
+        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x74510e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x73d639642520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP15Ast_Declaration+0x4ca) [0x818aaa]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP6Queued+0x1be) [0x80564e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x7cd5e2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace13do_pipe_inferEv+0xff) [0x7cd40f]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace10flow_pipesEb+0x11e) [0x7cfe3e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z13compiler_pumpP9Workspaceb+0x38d) [0x7dc8ad]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z20do_compilation_cycleP9Workspaceb+0x52) [0x7defa2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z28workspace_thread_entry_pointPv+0x1c0) [0x7df420]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x84a285]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x73d639694ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x73d639726850]\n\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
@@ -88,5 +88,35 @@
     },
     "file_path": "compiler_bugs/365_363_CEC0.jai",
     "tracking_issue_number": 365
+  },
+  "366": {
+    "beta-0.1.096": {
+      "linux": {
+        "compilation_exit_code": 0,
+        "compiler_error_output": "",
+        "compiler_output": "-1\n-2\n-3\n-4\n-5\n-6\n-7\n-8\n-9\n-10\n-11\n-12\n-13\n-14\n-15\n",
+        "expected_compilation_exit_code": 1,
+        "expected_run_exit_code": -1,
+        "is_runtime_test": false,
+        "passed_test": false,
+        "run_exit_code": -1,
+        "runtime_error_output": "",
+        "runtime_output": ""
+      },
+      "windows": {
+        "compilation_exit_code": 0,
+        "compiler_error_output": "",
+        "compiler_output": "-1\r\n-2\r\n-3\r\n-4\r\n-5\r\n-6\r\n-7\r\n-8\r\n-9\r\n-10\r\n-11\r\n-12\r\n-13\r\n-14\r\n-15\r\n",
+        "expected_compilation_exit_code": 1,
+        "expected_run_exit_code": -1,
+        "is_runtime_test": false,
+        "passed_test": false,
+        "run_exit_code": -1,
+        "runtime_error_output": "",
+        "runtime_output": ""
+      }
+    },
+    "file_path": "compiler_bugs/366_362_CEC1.jai",
+    "tracking_issue_number": 366
   }
 }
