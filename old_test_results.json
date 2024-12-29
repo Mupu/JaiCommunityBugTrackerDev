@@ -3,7 +3,7 @@
     "beta-0.1.096": {
       "linux": {
         "compilation_exit_code": 3,
-        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x74510e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x720b25442520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP15Ast_Declaration+0x4ca) [0x818aaa]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP6Queued+0x1be) [0x80564e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x7cd5e2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace13do_pipe_inferEv+0xff) [0x7cd40f]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace10flow_pipesEb+0x11e) [0x7cfe3e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z13compiler_pumpP9Workspaceb+0x38d) [0x7dc8ad]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z20do_compilation_cycleP9Workspaceb+0x52) [0x7defa2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z28workspace_thread_entry_pointPv+0x1c0) [0x7df420]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x84a285]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x720b25494ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x720b25526850]\n\n",
+        "compiler_error_output": "Error: Jai encountered an exception running the program and is terminating.\n\nThis happened outside compile-time execution, so it is likely the compiler's fault.\n\nStack trace of the compiler:\n\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x74510e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x707597c42520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP15Ast_Declaration+0x4ca) [0x818aaa]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN5Typer11infer_typesEP6Queued+0x1be) [0x80564e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux() [0x7cd5e2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace13do_pipe_inferEv+0xff) [0x7cd40f]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_ZN9Workspace10flow_pipesEb+0x11e) [0x7cfe3e]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z13compiler_pumpP9Workspaceb+0x38d) [0x7dc8ad]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z20do_compilation_cycleP9Workspaceb+0x52) [0x7defa2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z28workspace_thread_entry_pointPv+0x1c0) [0x7df420]\n/home/ubuntu/Desktop/Jai/jai-beta-0.1.096/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x84a285]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x707597c94ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x707597d26850]\n\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
@@ -58,5 +58,35 @@
     },
     "file_path": "compiler_bugs/356_355_CEC0.jai",
     "tracking_issue_number": 356
+  },
+  "365": {
+    "beta-0.1.096": {
+      "linux": {
+        "compilation_exit_code": 1,
+        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,33: Error: Compile-time assertion failed.\n\n    #import \"Basic\";\n    check :: (o1 : $T1, o2 : $T2) { #assert(T1 == T2); }\n                                    ^^^^^^^\n\nInfo: In Workspace 2 (\"Target Program\"), building target '365_363_CEC0'.\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: Polymorph generation history:\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: Info: While generating a polymorph of this procedure.\n\n    check :: (o1 : $T1, o2 : $T2) { #assert(T1 == T2); }\n             ^^^^^^^^^^^^^^^^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: ... with the following constants: (T1=void, T2=Type).\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:6,2: Info: ... The polymorph was triggered here.\n\n    main :: () {\n    \tcheck((cast(*void)0).*, #run (cast(*void)0).*); // OK\n    \tcheck((struct{x:void;}).{}.x, #run (struct{x:void;}).{}.x); // fails\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+        "compiler_output": "",
+        "expected_compilation_exit_code": 0,
+        "expected_run_exit_code": -1,
+        "is_runtime_test": false,
+        "passed_test": false,
+        "run_exit_code": -1,
+        "runtime_error_output": "",
+        "runtime_output": ""
+      },
+      "windows": {
+        "compilation_exit_code": 1,
+        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,33: Error: Compile-time assertion failed.\r\n\r\n    #import \"Basic\";\r\n    check :: (o1 : $T1, o2 : $T2) { #assert(T1 == T2); }\r\n                                    ^^^^^^^\r\n\r\nInfo: In Workspace 2 (\"Target Program\"), building target '365_363_CEC0'.\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: Polymorph generation history:\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: Info: While generating a polymorph of this procedure.\r\n\r\n    check :: (o1 : $T1, o2 : $T2) { #assert(T1 == T2); }\r\n             ^^^^^^^^^^^^^^^^^^^^\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: ... with the following constants: (T1=void, T2=Type).\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:6,2: Info: ... The polymorph was triggered here.\r\n\r\n    main :: () {\r\n    \tcheck((cast(*void)0).*, #run (cast(*void)0).*); // OK\r\n    \tcheck((struct{x:void;}).{}.x, #run (struct{x:void;}).{}.x); // fails\r\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n\r\n",
+        "compiler_output": "",
+        "expected_compilation_exit_code": 0,
+        "expected_run_exit_code": -1,
+        "is_runtime_test": false,
+        "passed_test": false,
+        "run_exit_code": -1,
+        "runtime_error_output": "",
+        "runtime_output": ""
+      }
+    },
+    "file_path": "compiler_bugs/365_363_CEC0.jai",
+    "tracking_issue_number": 365
   }
 }
