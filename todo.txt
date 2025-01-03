@@ -49,6 +49,7 @@
 # [ ] create the categoreies list for issue clasification
 # [ ] add machine os data etc to issue like windows version, take a look at runner envs
 # [ ] fix issue links in readme
+# [ ] https://github.com/Mupu/JaiCommunityBugTrackerDev/issues/373 why no output?
 
 
 
