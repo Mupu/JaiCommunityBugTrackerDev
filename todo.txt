@@ -23,6 +23,7 @@
 #
 # FOR RELEASE
 #
+# [ ] change / add note earlier in text to quickly let users know that it can be used to track bugs and get notified!
 # [ ] fix broken decrementVersionString 
 # [ ] add link to the sourcecode file/folder in the tracker
 # [ ] clearify bug report message for expected error to exit exit code and maybe remove 
