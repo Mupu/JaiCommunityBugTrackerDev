@@ -23,6 +23,7 @@
 #
 # FOR RELEASE
 #
+# [ ] why was label 2.008 not created?
 # [ ] change / add note earlier in text to quickly let users know that it can be used to track bugs and get notified!
 # [ ] fix broken decrementVersionString 
 # [ ] add link to the sourcecode file/folder in the tracker
