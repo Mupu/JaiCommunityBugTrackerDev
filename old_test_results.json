@@ -1,6 +1,6 @@
 {
   "353": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/353_352_CEC1.jai:5,38: Error: Attempt to use a value inside its own declaration.\n\n        tree : [..] T;\n    }\n    heap_peek :: (heap: *Heap($T, #type (heap.T, heap.T) -> (bool))) -> (T, success: bool)\n                                         ^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/353_352_CEC1.jai:5,15: ... Here is the start of the declaration.\n",
@@ -30,7 +30,7 @@
     "tracking_issue_number": 353
   },
   "356": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\nThe program contains circular dependencies.\nStrangely, we did not find a cycle, so this is probably due to a compiler bug. To help you work around the problem, we'll now print out what is not compiling:\n\nHere are items, waiting to compile, that look suspicious because we don't know why they are waiting:\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC0.jai:1,1: Info: (declaration of 'X')\n\n    X::union{x:X;}\n    ^^^^^^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC0.jai:1,1: s=0x0 type=DECLARATION\n\n    X::union{x:X;}\n    ^^^^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC0.jai:1,10: Info: (declaration of 'x')\n\n    X::union{x:X;}\n             ^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC0.jai:1,10: s=0x0 type=DECLARATION\n\n    X::union{x:X;}\n             ^^^\n\n\nHere are some other items, that may just be waiting on the ones listed above:\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC0.jai:1,4: Info: (X)\n\n    X::union{x:X;}\n       ^^^^^\n\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/356_355_CEC0.jai:1,4: s=0x0 type=STRUCT\n\n    X::union{x:X;}\n       ^^^^^\n\n\n",
@@ -60,7 +60,7 @@
     "tracking_issue_number": 356
   },
   "365": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,33: Error: Compile-time assertion failed.\n\n    #import \"Basic\";\n    check :: (o1 : $T1, o2 : $T2) { #assert(T1 == T2); }\n                                    ^^^^^^^\n\nInfo: In Workspace 2 (\"Target Program\"), building target '365_363_CEC0'.\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: Polymorph generation history:\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: Info: While generating a polymorph of this procedure.\n\n    check :: (o1 : $T1, o2 : $T2) { #assert(T1 == T2); }\n             ^^^^^^^^^^^^^^^^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:3,10: ... with the following constants: (T1=void, T2=Type).\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/365_363_CEC0.jai:6,2: Info: ... The polymorph was triggered here.\n\n    main :: () {\n    \tcheck((cast(*void)0).*, #run (cast(*void)0).*); // OK\n    \tcheck((struct{x:void;}).{}.x, #run (struct{x:void;}).{}.x); // fails\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
@@ -90,7 +90,7 @@
     "tracking_issue_number": 365
   },
   "366": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 0,
         "compiler_error_output": "",
@@ -120,29 +120,29 @@
     "tracking_issue_number": 366
   },
   "368": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 0,
         "compiler_error_output": "",
-        "compiler_output": "Running linker: /home/ubuntu/Desktop/Jai/jai-beta-0.2.008//bin/lld-linux -flavor Gnu --eh-frame-hdr -export-dynamic -o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/368_361_REC0 /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_0_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_1_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_2_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_3_w2.o /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /lib/x86_64-linux-gnu/crtn.o -L /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev --dynamic-linker /lib64/ld-linux-x86-64.so.2 -rpath='$ORIGIN' -L /usr/lib/x86_64-linux-gnu/libfakeroot -L /usr/local/lib -L /usr/local/lib/x86_64-linux-gnu -L /lib/x86_64-linux-gnu -L /usr/lib/x86_64-linux-gnu -L /lib64 -L /lib -L /usr/lib64 -L /usr/lib -L /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/ --start-group /lib/x86_64-linux-gnu/libc.so --end-group\n\nStats for Workspace 2 (\"Target Program\"):\nLexer lines processed: 11304 (18991 including blank lines, comments.)\nFront-end time: 0.088423 seconds.\nllvm      time: 0.227935 seconds.\n\nCompiler  time: 0.316357 seconds.\nLink      time: 0.000310 seconds.\nTotal     time: 0.316667 seconds.\n",
+        "compiler_output": "Running linker: /home/ubuntu/Desktop/Jai/jai-beta-0.2.009//bin/lld-linux -flavor Gnu --eh-frame-hdr -export-dynamic -o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/368_361_REC0 /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_0_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_1_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_2_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_3_w2.o /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /lib/x86_64-linux-gnu/crtn.o -L /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev --dynamic-linker /lib64/ld-linux-x86-64.so.2 -rpath='$ORIGIN' -L /usr/lib/x86_64-linux-gnu/libfakeroot -L /usr/local/lib -L /usr/local/lib/x86_64-linux-gnu -L /lib/x86_64-linux-gnu -L /usr/lib/x86_64-linux-gnu -L /lib64 -L /lib -L /usr/lib64 -L /usr/lib -L /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/ --start-group /lib/x86_64-linux-gnu/libc.so --end-group\n\nStats for Workspace 2 (\"Target Program\"):\nLexer lines processed: 11304 (18995 including blank lines, comments.)\nFront-end time: 0.104351 seconds.\nllvm      time: 0.208421 seconds.\n\nCompiler  time: 0.312772 seconds.\nLink      time: 0.000403 seconds.\nTotal     time: 0.313175 seconds.\n",
         "expected_compilation_exit_code": 0,
         "expected_run_exit_code": 0,
         "is_runtime_test": true,
         "passed_test": false,
         "run_exit_code": 1,
-        "runtime_error_output": "Cast bounds check failed.  Number must be in [0, 255]; it was 1230.  Site is /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/String/module.jai:1196.\nPanic.\nBreakpoint hit. Stack trace:\ncompiler_bugs/368_361_REC0(debug_break_9000000d1+0x29) [0x22fdf9]\ncompiler_bugs/368_361_REC0(my_panic_9000000c8+0x54) [0x224084]\ncompiler_bugs/368_361_REC0(__cast_bounds_check_fail_9000000c0+0x582) [0x223c82]\ncompiler_bugs/368_361_REC0(parse_int_1700000009+0x1ef) [0x2328ef]\ncompiler_bugs/368_361_REC0(__program_main+0x185) [0x225a85]\ncompiler_bugs/368_361_REC0(main+0xa6) [0x22c336]\n/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x74a421e29d90]\n/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x74a421e29e40]\ncompiler_bugs/368_361_REC0(_start+0x25) [0x2484f5]\n",
+        "runtime_error_output": "Cast bounds check failed.  Number must be in [0, 255]; it was 1230.  Site is /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/String/module.jai:1200.\nPanic.\nBreakpoint hit. Stack trace:\ncompiler_bugs/368_361_REC0(debug_break_300000051+0x29) [0x22a599]\ncompiler_bugs/368_361_REC0(my_panic_300000048+0x54) [0x21ebd4]\ncompiler_bugs/368_361_REC0(__cast_bounds_check_fail_300000040+0x582) [0x21e7d2]\ncompiler_bugs/368_361_REC0(parse_int_1700000009+0x1f2) [0x214bc2]\ncompiler_bugs/368_361_REC0(__program_main+0x185) [0x220f65]\ncompiler_bugs/368_361_REC0(main+0xa6) [0x226e06]\n/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x758ff2429d90]\n/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x758ff2429e40]\ncompiler_bugs/368_361_REC0(_start+0x25) [0x248525]\n",
         "runtime_output": ""
       },
       "windows": {
         "compilation_exit_code": 0,
         "compiler_error_output": "",
-        "compiler_output": "   Creating library C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0.lib and object C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0.exp\r\nRunning linker: \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\link.exe\" /nologo C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_0_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_1_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_2_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_3_w2.obj /OUT:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/368_361_REC0.exe /MACHINE:AMD64 /INCREMENTAL:NO /DEBUG /IMPLIB:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0.lib /libpath:\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\lib\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\ucrt\\x64\" -nodefaultlib libcmt.lib vcruntime.lib ucrt.lib kernel32.lib kernel32.lib DbgHelp.lib\r\n\r\nStats for Workspace 2 (\"Target Program\"):\r\nLexer lines processed: 10844 (17430 including blank lines, comments.)\r\nFront-end time: 0.051209 seconds.\r\nllvm      time: 0.079288 seconds.\r\n\r\nCompiler  time: 0.130497 seconds.\r\nLink      time: 0.232099 seconds.\r\nTotal     time: 0.362596 seconds.\r\n",
+        "compiler_output": "   Creating library C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0.lib and object C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0.exp\r\nRunning linker: \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\link.exe\" /nologo C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_0_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_1_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_2_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0_3_w2.obj /OUT:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/368_361_REC0.exe /MACHINE:AMD64 /INCREMENTAL:NO /DEBUG /IMPLIB:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/368_361_REC0.lib /libpath:\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\lib\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\ucrt\\x64\" -nodefaultlib kernel32.lib DbgHelp.lib libcmt.lib vcruntime.lib ucrt.lib\r\n\r\nStats for Workspace 2 (\"Target Program\"):\r\nLexer lines processed: 10845 (17435 including blank lines, comments.)\r\nFront-end time: 0.052216 seconds.\r\nllvm      time: 0.077065 seconds.\r\n\r\nCompiler  time: 0.129281 seconds.\r\nLink      time: 0.307213 seconds.\r\nTotal     time: 0.436493 seconds.\r\n",
         "expected_compilation_exit_code": 0,
         "expected_run_exit_code": 0,
         "is_runtime_test": true,
         "passed_test": false,
         "run_exit_code": 1,
-        "runtime_error_output": "Cast bounds check failed.  Number must be in [0, 255]; it was 1230.  Site is C:/jai/modules/String/module.jai:1196.\nPanic.\nA breakpoint was hit, but no debugger is attached.\n\nPrinting the stack trace:\nhandle_exception                  C:\\jai\\modules\\Runtime_Support_Crash_Handler.jai:361\n... (skipping OS-internal procedures)\ndebug_break                       C:\\jai\\modules\\Runtime_Support.jai:462\nmy_panic                          C:\\jai\\modules\\Runtime_Support.jai:364\n__cast_bounds_check_fail          C:\\jai\\modules\\Runtime_Support.jai:218\nparse_int(T=u8)                   C:\\jai\\modules\\String\\module.jai:1196\nmain                              C:\\Users\\Private\\Desktop\\testo_runner\\_work\\JaiCommunityBugTrackerDev\\JaiCommunityBugTrackerDev\\compiler_bugs\\368_361_REC0.jai:6\n",
+        "runtime_error_output": "Cast bounds check failed.  Number must be in [0, 255]; it was 1230.  Site is C:/jai/modules/String/module.jai:1200.\nPanic.\nA breakpoint was hit, but no debugger is attached.\n\nPrinting the stack trace:\nhandle_exception                  C:\\jai\\modules\\Runtime_Support_Crash_Handler.jai:361\n... (skipping OS-internal procedures)\ndebug_break                       C:\\jai\\modules\\Runtime_Support.jai:462\nmy_panic                          C:\\jai\\modules\\Runtime_Support.jai:364\n__cast_bounds_check_fail          C:\\jai\\modules\\Runtime_Support.jai:218\nparse_int(T=u8)                   C:\\jai\\modules\\String\\module.jai:1200\nmain                              C:\\Users\\Private\\Desktop\\testo_runner\\_work\\JaiCommunityBugTrackerDev\\JaiCommunityBugTrackerDev\\compiler_bugs\\368_361_REC0.jai:6\n",
         "runtime_output": ""
       }
     },
@@ -150,11 +150,11 @@
     "tracking_issue_number": 368
   },
   "370": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 0,
         "compiler_error_output": "",
-        "compiler_output": "Running linker: /home/ubuntu/Desktop/Jai/jai-beta-0.2.008//bin/lld-linux -flavor Gnu --eh-frame-hdr -export-dynamic -o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/370_359_CEC1 /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_0_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_1_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_2_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_3_w2.o /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /lib/x86_64-linux-gnu/crtn.o -L /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev --dynamic-linker /lib64/ld-linux-x86-64.so.2 -rpath='$ORIGIN' -L /usr/lib/x86_64-linux-gnu/libfakeroot -L /usr/local/lib -L /usr/local/lib/x86_64-linux-gnu -L /lib/x86_64-linux-gnu -L /usr/lib/x86_64-linux-gnu -L /lib64 -L /lib -L /usr/lib64 -L /usr/lib -L /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/ --start-group /lib/x86_64-linux-gnu/libc.so --end-group\n\nStats for Workspace 2 (\"Target Program\"):\nLexer lines processed: 10303 (17137 including blank lines, comments.)\nFront-end time: 0.074164 seconds.\nllvm      time: 0.160433 seconds.\n\nCompiler  time: 0.234597 seconds.\nLink      time: 0.000359 seconds.\nTotal     time: 0.234956 seconds.\n",
+        "compiler_output": "Running linker: /home/ubuntu/Desktop/Jai/jai-beta-0.2.009//bin/lld-linux -flavor Gnu --eh-frame-hdr -export-dynamic -o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/370_359_CEC1 /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_0_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_1_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_2_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_3_w2.o /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /lib/x86_64-linux-gnu/crtn.o -L /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev --dynamic-linker /lib64/ld-linux-x86-64.so.2 -rpath='$ORIGIN' -L /usr/lib/x86_64-linux-gnu/libfakeroot -L /usr/local/lib -L /usr/local/lib/x86_64-linux-gnu -L /lib/x86_64-linux-gnu -L /usr/lib/x86_64-linux-gnu -L /lib64 -L /lib -L /usr/lib64 -L /usr/lib -L /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/ --start-group /lib/x86_64-linux-gnu/libc.so --end-group\n\nStats for Workspace 2 (\"Target Program\"):\nLexer lines processed: 10303 (17137 including blank lines, comments.)\nFront-end time: 0.084626 seconds.\nllvm      time: 0.205146 seconds.\n\nCompiler  time: 0.289772 seconds.\nLink      time: 0.000586 seconds.\nTotal     time: 0.290358 seconds.\n",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
         "is_runtime_test": false,
@@ -166,7 +166,7 @@
       "windows": {
         "compilation_exit_code": 0,
         "compiler_error_output": "",
-        "compiler_output": "   Creating library C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1.lib and object C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1.exp\r\nRunning linker: \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\link.exe\" /nologo C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_0_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_1_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_2_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_3_w2.obj /OUT:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/370_359_CEC1.exe /MACHINE:AMD64 /INCREMENTAL:NO /DEBUG /IMPLIB:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1.lib /libpath:\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\lib\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\ucrt\\x64\" -nodefaultlib libcmt.lib vcruntime.lib ucrt.lib kernel32.lib kernel32.lib DbgHelp.lib\r\n\r\nStats for Workspace 2 (\"Target Program\"):\r\nLexer lines processed: 9843 (15576 including blank lines, comments.)\r\nFront-end time: 0.051996 seconds.\r\nllvm      time: 0.078514 seconds.\r\n\r\nCompiler  time: 0.130510 seconds.\r\nLink      time: 0.209082 seconds.\r\nTotal     time: 0.339592 seconds.\r\n",
+        "compiler_output": "   Creating library C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1.lib and object C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1.exp\r\nRunning linker: \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\link.exe\" /nologo C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_0_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_1_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_2_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1_3_w2.obj /OUT:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/370_359_CEC1.exe /MACHINE:AMD64 /INCREMENTAL:NO /DEBUG /IMPLIB:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/370_359_CEC1.lib /libpath:\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\lib\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\ucrt\\x64\" -nodefaultlib kernel32.lib DbgHelp.lib libcmt.lib vcruntime.lib ucrt.lib\r\n\r\nStats for Workspace 2 (\"Target Program\"):\r\nLexer lines processed: 9844 (15577 including blank lines, comments.)\r\nFront-end time: 0.051074 seconds.\r\nllvm      time: 0.076640 seconds.\r\n\r\nCompiler  time: 0.127715 seconds.\r\nLink      time: 0.261592 seconds.\r\nTotal     time: 0.389306 seconds.\r\n",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
         "is_runtime_test": false,
@@ -180,7 +180,7 @@
     "tracking_issue_number": 370
   },
   "371": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/371_358_CEC0.jai:12,5: Error: Identifier 'foo' is used here but is overloaded later, so it is being used before declared.\n\n    }\n    x := 15;\n    foo(x);\n    ^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/371_358_CEC0.jai:17,5: Info: Here is the overload that is declared later.\n\n    foo :: (y : int) #expand {\n    ^^^^^^^^^^^^^^^^\n\n",
@@ -210,7 +210,7 @@
     "tracking_issue_number": 371
   },
   "373": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 0,
         "compiler_error_output": "",
@@ -240,10 +240,10 @@
     "tracking_issue_number": 373
   },
   "374": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/374_360_CEC0.jai:14,9: Error: Procedure call did not match any of the possible overloads.\n\n    a := A.{10};\n    max(1, a); // ok\n    1 + a; // error\n    ^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/374_360_CEC0.jai:14,9: The call site's argument types are: (s64/literal, A)\n\nPossible overloads:\n\n        \n    operator + :: inline (a: S128, b: S128) -> S128 { // This can be the same code for S128 and U128.   (/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Basic/Int128.jai:67)\n                         ^^^^^^^^^^^^^^^^^^\n\n        Type mismatch. Type wanted: S128; type given: s64.\n        /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Basic/Int128.jai:67,22: Info: ... in argument 1.\n        \n    operator + :: (a: U128, b: U128) -> U128 {   (/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Basic/Int128.jai:745)\n                  ^^^^^^^^^^^^^^^^^^\n\n        Type mismatch. Type wanted: U128; type given: s64.\n        /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Basic/Int128.jai:745,15: Info: ... in argument 1.\n        \n    operator + :: (a: U128, b: u64) -> U128 {   (/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Basic/Int128.jai:749)\n                  ^^^^^^^^^^^^^^^^^\n\n        Type mismatch. Type wanted: U128; type given: s64.\n        /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Basic/Int128.jai:749,15: Info: ... in argument 1.\n        \n",
+        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/374_360_CEC0.jai:14,9: Error: Procedure call did not match any of the possible overloads.\n\n    a := A.{10};\n    max(1, a); // ok\n    1 + a; // error\n    ^^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/374_360_CEC0.jai:14,9: The call site's argument types are: (s64/literal, A)\n\nPossible overloads:\n\n        \n    operator + :: inline (a: S128, b: S128) -> S128 { // This can be the same code for S128 and U128.   (/home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Basic/Int128.jai:67)\n                         ^^^^^^^^^^^^^^^^^^\n\n        Type mismatch. Type wanted: S128; type given: s64.\n        /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Basic/Int128.jai:67,22: Info: ... in argument 1.\n        \n    operator + :: (a: U128, b: U128) -> U128 {   (/home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Basic/Int128.jai:745)\n                  ^^^^^^^^^^^^^^^^^^\n\n        Type mismatch. Type wanted: U128; type given: s64.\n        /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Basic/Int128.jai:745,15: Info: ... in argument 1.\n        \n    operator + :: (a: U128, b: u64) -> U128 {   (/home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Basic/Int128.jai:749)\n                  ^^^^^^^^^^^^^^^^^\n\n        Type mismatch. Type wanted: U128; type given: s64.\n        /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Basic/Int128.jai:749,15: Info: ... in argument 1.\n        \n",
         "compiler_output": "",
         "expected_compilation_exit_code": 0,
         "expected_run_exit_code": -1,
@@ -270,11 +270,11 @@
     "tracking_issue_number": 374
   },
   "376": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
-        "compiler_error_output": "lld-linux: error: undefined symbol: __program_main_90000020b\n>>> referenced by Runtime_Support.jai:439 (/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/Runtime_Support.jai:439)\n>>>               /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_1_w2.o:(__system_entry_point_90000020a)\n",
-        "compiler_output": "Running linker: /home/ubuntu/Desktop/Jai/jai-beta-0.2.008//bin/lld-linux -flavor Gnu --eh-frame-hdr -export-dynamic -o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/376_372_CEC0 /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_0_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_1_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_2_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_3_w2.o /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /lib/x86_64-linux-gnu/crtn.o -L /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev --dynamic-linker /lib64/ld-linux-x86-64.so.2 -rpath='$ORIGIN' -L /usr/lib/x86_64-linux-gnu/libfakeroot -L /usr/local/lib -L /usr/local/lib/x86_64-linux-gnu -L /lib/x86_64-linux-gnu -L /usr/lib/x86_64-linux-gnu -L /lib64 -L /lib -L /usr/lib64 -L /usr/lib -L /home/ubuntu/Desktop/Jai/jai-beta-0.2.008/modules/ --start-group /lib/x86_64-linux-gnu/libc.so --end-group\n",
+        "compiler_error_output": "lld-linux: error: undefined symbol: __program_main_b000001dc\n>>> referenced by Runtime_Support.jai:439 (/home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/Runtime_Support.jai:439)\n>>>               /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_1_w2.o:(__system_entry_point_b000001db)\n",
+        "compiler_output": "Running linker: /home/ubuntu/Desktop/Jai/jai-beta-0.2.009//bin/lld-linux -flavor Gnu --eh-frame-hdr -export-dynamic -o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/376_372_CEC0 /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_0_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_1_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_2_w2.o /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_3_w2.o /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /lib/x86_64-linux-gnu/crtn.o -L /home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev --dynamic-linker /lib64/ld-linux-x86-64.so.2 -rpath='$ORIGIN' -L /usr/lib/x86_64-linux-gnu/libfakeroot -L /usr/local/lib -L /usr/local/lib/x86_64-linux-gnu -L /lib/x86_64-linux-gnu -L /usr/lib/x86_64-linux-gnu -L /lib64 -L /lib -L /usr/lib64 -L /usr/lib -L /home/ubuntu/Desktop/Jai/jai-beta-0.2.009/modules/ --start-group /lib/x86_64-linux-gnu/libc.so --end-group\n",
         "expected_compilation_exit_code": 0,
         "expected_run_exit_code": -1,
         "is_runtime_test": false,
@@ -286,7 +286,7 @@
       "windows": {
         "compilation_exit_code": 1,
         "compiler_error_output": "",
-        "compiler_output": "   Creating library C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0.lib and object C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0.exp\r\n376_372_CEC0_3_w2.obj : error LNK2019: unresolved external symbol __program_main_7000000a7 referenced in function main\r\nC:\\Users\\Private\\Desktop\\testo_runner\\_work\\JaiCommunityBugTrackerDev\\JaiCommunityBugTrackerDev\\compiler_bugs\\376_372_CEC0.exe : fatal error LNK1120: 1 unresolved externals\r\nRunning linker: \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\link.exe\" /nologo C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_0_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_1_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_2_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_3_w2.obj /OUT:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/376_372_CEC0.exe /MACHINE:AMD64 /INCREMENTAL:NO /DEBUG /IMPLIB:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0.lib /libpath:\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\lib\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\ucrt\\x64\" -nodefaultlib libcmt.lib vcruntime.lib ucrt.lib kernel32.lib kernel32.lib DbgHelp.lib\r\n",
+        "compiler_output": "   Creating library C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0.lib and object C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0.exp\r\n376_372_CEC0_3_w2.obj : error LNK2019: unresolved external symbol __program_main_9000000ea referenced in function main\r\nC:\\Users\\Private\\Desktop\\testo_runner\\_work\\JaiCommunityBugTrackerDev\\JaiCommunityBugTrackerDev\\compiler_bugs\\376_372_CEC0.exe : fatal error LNK1120: 1 unresolved externals\r\nRunning linker: \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\link.exe\" /nologo C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_0_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_1_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_2_w2.obj C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0_3_w2.obj /OUT:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/376_372_CEC0.exe /MACHINE:AMD64 /INCREMENTAL:NO /DEBUG /IMPLIB:C:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/.build/376_372_CEC0.lib /libpath:\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\lib\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\um\\x64\" /libpath:\"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22000.0\\ucrt\\x64\" -nodefaultlib kernel32.lib DbgHelp.lib libcmt.lib vcruntime.lib ucrt.lib\r\n",
         "expected_compilation_exit_code": 0,
         "expected_run_exit_code": -1,
         "is_runtime_test": false,
@@ -300,10 +300,10 @@
     "tracking_issue_number": 376
   },
   "377": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,7: Error: A quick-procedure's return type cannot depend on its own return type, because then there's no way to figure out what that type should be!\n\n    f::a=>f(a);f(1);\n          ^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Polymorph generation history:\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Info: While generating a polymorph of this procedure.\n\n    f::a=>f(a);f(1);\n       ^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: ... with the following constants: (quick_lambda_parameter_7fea542a0498=s64).\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,12: Info: ... The polymorph was triggered here.\n\n    f::a=>f(a);f(1);\n               ^^^^\n\n",
+        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,7: Error: A quick-procedure's return type cannot depend on its own return type, because then there's no way to figure out what that type should be!\n\n    f::a=>f(a);f(1);\n          ^^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Polymorph generation history:\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Info: While generating a polymorph of this procedure.\n\n    f::a=>f(a);f(1);\n       ^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: ... with the following constants: (quick_lambda_parameter_7de5d02b0550=s64).\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,12: Info: ... The polymorph was triggered here.\n\n    f::a=>f(a);f(1);\n               ^^^^\n\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
@@ -315,7 +315,7 @@
       },
       "windows": {
         "compilation_exit_code": 1,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,7: Error: A quick-procedure's return type cannot depend on its own return type, because then there's no way to figure out what that type should be!\r\n\r\n    f::a=>f(a);f(1);\r\n          ^^^^\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Polymorph generation history:\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Info: While generating a polymorph of this procedure.\r\n\r\n    f::a=>f(a);f(1);\r\n       ^\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: ... with the following constants: (quick_lambda_parameter_4642ebb8=s64).\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,12: Info: ... The polymorph was triggered here.\r\n\r\n    f::a=>f(a);f(1);\r\n               ^^^^\r\n\r\n",
+        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,7: Error: A quick-procedure's return type cannot depend on its own return type, because then there's no way to figure out what that type should be!\r\n\r\n    f::a=>f(a);f(1);\r\n          ^^^^\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Polymorph generation history:\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: Info: While generating a polymorph of this procedure.\r\n\r\n    f::a=>f(a);f(1);\r\n       ^\r\n\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,4: ... with the following constants: (quick_lambda_parameter_4236ef00=s64).\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/377_375_CEC1.jai:1,12: Info: ... The polymorph was triggered here.\r\n\r\n    f::a=>f(a);f(1);\r\n               ^^^^\r\n\r\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 1,
         "expected_run_exit_code": -1,
@@ -330,7 +330,7 @@
     "tracking_issue_number": 377
   },
   "378": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/378_369_CEC0.jai:9,2: Error: Declaration claims to be constant, but uses an expression that is not constant.\n\n    main :: () {\n    \tC :: ivec2.{A.x, 1};\n     ^^^^^^^^^^^^^^^^^^^\n\n",
@@ -360,7 +360,7 @@
     "tracking_issue_number": 378
   },
   "379": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/379_367_CEC0.jai:27,38: Error: Type mismatch between the arguments when comparing two procedures. Type wanted: *int; type given: *string.\n\n    \t// can't\n    \tfoo2 :: #bake_arguments foo1(proc = bar);\n                                         ^^^\n\n",
@@ -390,7 +390,7 @@
     "tracking_issue_number": 379
   },
   "381": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/381_364_CEC0.jai:33,17: Error: Too many values provided in this struct literal.\n\n    }\n    for (B.{.{}}) {}\n            ^^^\n\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/381_364_CEC0.jai:27,14: Info: Here is the struct type that this literal is attempting to fill.\n\n    { // compiler error\n        A :: struct{}\n        B :: struct{a : A;}\n             ^^^^^^\n\n",
@@ -420,7 +420,7 @@
     "tracking_issue_number": 381
   },
   "382": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/382_380_REC0.jai:6,12: Error: Type mismatch. Type wanted: void; type given: s64.\n\n    print(\"% %\\n\", a, type_of(a));\n    assert(type_of(a) == int);\n    assert(a == 42);\n           ^^^^^^^\n\n",
@@ -450,7 +450,7 @@
     "tracking_issue_number": 382
   },
   "384": {
-    "beta-0.2.008": {
+    "beta-0.2.009": {
       "linux": {
         "compilation_exit_code": 1,
         "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/384_383_CEC0.jai:9,4: Error: Undeclared identifier 'test'.\n\n    main :: () {\n       using context;\n       test = .{};\n       ^^^^\n\n",
@@ -480,10 +480,10 @@
     "tracking_issue_number": 384
   },
   "386": {
-    "beta-0.2.001": {
+    "beta-0.2.009": {
       "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux() [0x757f2e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7c4967c42520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1bb3) [0x7d2bd3]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x2204) [0x7d06d4]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x572) [0x7ccd72]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7d90c4]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x280) [0x77cf40]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x7808a3]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.001/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x85e375]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7c4967c94ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x7c4967d26850]\n\n",
+        "compilation_exit_code": 1,
+        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 2,
         "expected_run_exit_code": -1,
@@ -494,190 +494,8 @@
         "runtime_output": ""
       },
       "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.001/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.002": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux() [0x757f5e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x734b9ae42520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1e47) [0x7d2cc7]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x2204) [0x7d0534]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x572) [0x7ccbd2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7d8ed4]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x280) [0x77cf30]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x7806c3]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.002/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x85e1b5]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x734b9ae94ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x734b9af26850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.002/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.003": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux() [0x758b6e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x769598c42520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1e31) [0x7d4061]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x2167) [0x7d1967]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x552) [0x7ce0a2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7da5c4]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x283) [0x77dff3]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x781833]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.003/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x860795]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x769598c94ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x769598d26850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.003/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.004": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux() [0x758cce]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x759e50442520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1e31) [0x7d43c1]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x2167) [0x7d1cc7]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x552) [0x7ce402]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7da924]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x283) [0x77e153]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x781993]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.004/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x860bc5]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x759e50494ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x759e50526850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.004/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.005": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux() [0x75a7de]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x792a98e42520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1791) [0x7d6b71]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x21f2) [0x7d4b22]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x5f2) [0x7d10c2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7ddef4]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x29d) [0x77f7bd]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x783053]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.005/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x866105]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x792a98e94ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x792a98f26850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.005/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.006": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux() [0x75a83e]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x78f395242520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1791) [0x7d6be1]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x21f2) [0x7d4b92]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x5f2) [0x7d1132]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7ddf64]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x29d) [0x77f71d]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x782f03]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.006/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x866505]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x78f395294ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x78f395326850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.006/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.007": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux() [0x75acee]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7b9ff4042520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1791) [0x7d7081]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x21f2) [0x7d5032]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x5f2) [0x7d15d2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7de404]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x29d) [0x77fbed]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x7833d3]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.007/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x866935]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7b9ff4094ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x7b9ff4126850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai-beta-0.2.007/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      }
-    },
-    "beta-0.2.008": {
-      "linux": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\nIn Workspace 2 (\"Target Program\"):\n/home/ubuntu/Desktop/actions-runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\n\n    #run, {\n          ^\n\nInternal compiler error: Jai encountered an exception and is terminating.\n\nStack trace:\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux() [0x75acee]\n/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7cfcca842520]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_ZN6Parser15parse_directiveEv+0x1791) [0x7d7161]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_ZN6Parser19parse_one_statementEbb+0x21f2) [0x7d5112]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_ZN6Parser11parse_blockEjP9Ast_BlockP5ArrayIP3AstLb0EE+0x5f2) [0x7d16b2]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_ZN6Parser14parse_toplevelEP11Active_LoadP9Ast_BlockP5ArrayIP3AstLb0EE+0xc4) [0x7de4e4]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_Z21do_job_parse_one_fileP3Job+0x29d) [0x77fbed]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_Z15job_thread_procPv+0xc3) [0x7833d3]\n/home/ubuntu/Desktop/Jai/jai-beta-0.2.008/bin/jai-linux(_Z16thread_middlemanPv+0x35) [0x866a15]\n/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7cfcca894ac3]\n/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x7cfcca926850]\n\n",
-        "compiler_output": "",
-        "expected_compilation_exit_code": 2,
-        "expected_run_exit_code": -1,
-        "is_runtime_test": false,
-        "passed_test": false,
-        "run_exit_code": -1,
-        "runtime_error_output": "",
-        "runtime_output": ""
-      },
-      "windows": {
-        "compilation_exit_code": 3,
-        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\nInternal compiler error: Jai encountered an exception and is terminating.\r\n\r\nCommand line arguments:\r\n  C:/jai/bin/jai.exe compiler_bugs/386_385_CEC2.jai\r\n  unknown(6FDB7374) : BaseThreadInitThunk\r\n\r\n",
+        "compilation_exit_code": 1,
+        "compiler_error_output": "\r\nIn Workspace 2 (\"Target Program\"):\r\nC:/Users/Private/Desktop/testo_runner/_work/JaiCommunityBugTrackerDev/JaiCommunityBugTrackerDev/compiler_bugs/386_385_CEC2.jai:1,7: Error: Expected an identifier after ','.\r\n\r\n    #run, {\r\n          ^\r\n\r\n",
         "compiler_output": "",
         "expected_compilation_exit_code": 2,
         "expected_run_exit_code": -1,
